@@ -1,0 +1,81 @@
+@import '../../assets/Scss/variable.scss';
+
+/// my code 
+.mobNav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 30px;
+    height: $nav-height;
+    .logo{
+        width: 60px;
+        img{
+            width: 100%;
+        }
+    }
+}
+.btnLang{
+    display: flex;
+    align-items: center;
+    .languageSite{
+        margin-right: 40px;
+        color: white;
+        a{
+            margin:2px;
+        }
+    }
+    
+}
+.hamburger{
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-around;
+    &:focus{
+        outline: none;
+    }
+    img{
+        width: 100%;
+    }
+}
+.sideNavBar{
+    display: flex;
+    justify-content: space-between;
+    background-color: #333333;
+    width: 70%;
+    height: 100vh;
+    color: white;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 200;
+    transform:  translateX(100%);
+    transition: transform .5s ease-out;
+    
+    ul{
+        list-style: none;
+        margin: 0;
+        padding: 23px;
+        li{
+            padding: 15px 30px;
+        }
+    }
+}
+.sideBarCloser{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    background-color: rgba(51, 51, 51,0.6);
+}
+.open{
+    transform:  translateX(0);
+    display: flex;
+
+}

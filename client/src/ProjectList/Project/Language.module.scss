@@ -1,0 +1,17 @@
+@import "../../assets/Scss/variable.scss";
+.langContainer{
+    padding: 0.1vw 1vw;
+    margin: 3px;
+    // border: 1px solid $dark-orange; 
+    border-radius: 20px;
+    color: #aaa;
+    p{
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 1600px){
+    .langContainer{
+        padding: 2px 15px;
+    }
+}

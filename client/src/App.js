@@ -1,77 +1,28 @@
-import React, { Component } from 'react';
+import React from 'react';
+import classes from './App.module.scss';
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import NavBar from './NavBar/NavBar';
+import Main from './Main/Main';
+import Footer from './Footer/Footer';
+import NotExist from './notExist/NotExist404';
+import ScrollToTop from './ScrollToTop/ScrollToTop';
 
-import logo from './logo.svg';
-
-import './App.css';
-
-class App extends Component {
-  state = {
-    response: '',
-    post: '',
-    responseToPost: '',
-  };
-
-  componentDidMount() {
-    this.callApi()
-      .then(res => this.setState({ response: res.express }))
-      .catch(err => console.log(err));
-  }
-
-  callApi = async () => {
-    const response = await fetch('/api/hello');
-    const body = await response.json();
-    if (response.status !== 200) throw Error(body.message);
-
-    return body;
-  };
-
-  handleSubmit = async e => {
-    e.preventDefault();
-    const response = await fetch('/api/world', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ post: this.state.post }),
-    });
-    const body = await response.text();
-
-    this.setState({ responseToPost: body });
-  };
-
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-        <p>{this.state.response}</p>
-        <form onSubmit={this.handleSubmit}>
-          <p>
-            <strong>Post to Server:</strong>
-          </p>
-          <input
-            type="text"
-            value={this.state.post}
-            onChange={e => this.setState({ post: e.target.value })}
-          />
-          <button type="submit">Submit</button>
-        </form>
-        <p>{this.state.responseToPost}</p>
-      </div>
-    );
-  }
+function App(props) {
+  console.log(props);
+  return (
+    <div className={classes.app}>
+      <BrowserRouter>
+        <ScrollToTop>
+          <NavBar />
+          <Switch>
+            <Route exact path={["/", "/en", "/de"]} component={Main} />
+            <Route component={NotExist} />
+          </Switch>
+          <Footer />
+        </ScrollToTop>
+      </BrowserRouter>
+    </div>
+  );
 }
 
 export default App;

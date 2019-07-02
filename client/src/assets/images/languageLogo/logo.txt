@@ -1,0 +1,12 @@
+Html5
+Css3
+Bootstrap
+Scss
+Javascript Es6
+Jquery
+React
+
+node.Js 
+express
+
+dbmongo

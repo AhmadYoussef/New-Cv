@@ -1,0 +1,14 @@
+@import '../assets/Scss/variable.scss';
+
+.navBar{
+
+    background-color: $black-color;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    a{
+        color: $dark-orange;
+        font-family: 'Cabin', sans-serif;
+        font-size: 1.1rem;
+    }
+}

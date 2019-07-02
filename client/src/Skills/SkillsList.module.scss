@@ -1,0 +1,27 @@
+@import "../assets/Scss/variable.scss";
+.SkillsContainer{
+    background: linear-gradient(270deg, rgba(51, 51, 51, 0.9) 0%, rgba(51, 51, 51, 0.62) 93.38%), url('../assets/images/backgroundSkills.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    // background-attachment: fixed;
+    p{
+        font-size: .85rem;
+      }
+    h2{
+        color: white;
+        margin: 0;
+        text-align: center;
+        padding: 30px ;
+    }
+    .skillsSlider{
+        width: 90%;
+        max-width: 1300px;
+        margin: 0 auto;    
+        
+    }
+}
+
+.swiper-pagination{
+    bottom: -10px;
+}

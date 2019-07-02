@@ -1,0 +1,40 @@
+*{box-sizing: border-box;}
+a{
+  text-decoration: none;
+}
+html {
+  font-family: 'Chivo', sans-serif;
+  font-size: calc(14px + (20 - 14) * ((100vw - 300px) / (1900 - 300)));
+  line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1900 - 300)));
+body {
+  margin: 0;
+  h2{
+    font-size: 2rem;
+  }
+  p{
+    font-size: 1rem;
+  }
+  small{
+    font-size: .8rem;
+  }
+  button{
+    font-size: .9rem;
+  }
+  input,textarea{
+    font-family: inherit;
+    font-size: .9rem;
+  }
+}
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+@media screen and (min-width: 1900px){
+  html{
+    font-size: 22px;
+    line-height: 1.5;
+  }
+}

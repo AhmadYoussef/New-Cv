@@ -1,0 +1,72 @@
+@import '../assets/Scss/variable.scss';
+
+
+.contactContainer{
+    background-color: $gray-color ;
+    padding: 50px 0;
+    h2{
+        color: $black-color;
+        margin: 0;
+        text-align: center;
+        padding: 30px ;
+    }
+    form{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 auto;
+        max-width: 1200px;
+        width: 70%;
+        input, textarea{
+            position: relative;
+            padding: 10px 19px;     
+            margin: 10px 0;
+            border: 1px solid $dark-orange;
+            border-radius: 20px;    
+            background-color: transparent; 
+            &.error{
+                border: 1px solid red;
+            }
+            &.error::placeholder{
+                color: red;
+            }
+        }
+        input{
+            width: 48%;
+        }
+        textarea{
+            width: 100%;
+            resize: none;
+        }
+        input[type="submit"]{
+            background-color: $black-color;
+            width: unset;
+            padding: 8px 15px;
+            color: $dark-orange;
+            border: 0;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: auto;
+            box-shadow: 0px 3px 5px -3px  $black-color;
+            &:hover{
+            background-color: $dark-black;
+            }
+            &:active {
+                box-shadow: unset ;  
+                outline: none;
+                border: none;
+            }
+            &:focus {outline:0;}
+        }
+    }
+}
+
+@media screen and (max-width: 800px){
+    .contactContainer{
+        form{
+            input{
+                width: 100%;
+            }
+        }
+    }
+}

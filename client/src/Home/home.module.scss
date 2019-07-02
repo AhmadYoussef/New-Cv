@@ -1,0 +1,92 @@
+@import '../assets/Scss/variable.scss';
+.homeBackground{
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(180deg, rgba(51, 51, 51, 0.8) 0%, rgba(51, 51, 51, 0.8) 0), url('../assets/images/backgroundHome.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .scrolly{
+        display: block;
+        position: absolute;
+        bottom: 30px;
+        width: 50px;
+        height: 75px;
+        border: 5px solid $dark-orange;
+        border-radius: 100px;
+        margin: 0 auto;
+        overflow: hidden;
+        cursor: pointer;
+      }
+      .dot{
+        width: 14px;
+        height: 14px;
+        background-color: white;
+        border-radius: 50%;
+        margin: 10px auto;
+        position: relative;
+        animation:  scroll-down 5s infinite;
+      }
+    .center{
+        color: white;
+        h2{
+            margin: 0;
+            font-family: inherit;
+            font-size: 2rem;
+            line-height: 3rem;
+            font-weight: 500;
+        }
+        .dowAndLogo{
+            p{
+                margin: 0;
+            }
+            display: flex;
+            justify-content:space-between;
+            align-items: flex-end;
+            .logos{
+                padding: 0 20px;
+                align-self: flex-end;
+
+                img{
+                    width: 25px;
+                    margin: 5px;
+                }
+            }
+        }
+        span{
+            color:$dark-orange;
+        }
+    }
+}
+@keyframes scroll-down {
+    0% {
+      top: -10px;
+    }
+    50%{
+      top: 30px;
+    }
+    100%{
+      top: 100px;
+    }
+  }
+@media screen and (max-width : 480px){
+    .homeBackground{
+        .center{
+            h2{
+                font-size: 1.3rem;
+            }
+            .dowAndLogo{
+                flex-direction: column;
+                align-items: flex-start;
+                .logos{
+                    margin-top: 15px;
+                padding: 0;
+                    
+                }
+            }
+        }
+    }
+}

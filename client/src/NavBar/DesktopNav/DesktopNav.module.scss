@@ -1,0 +1,86 @@
+@import '../../assets/Scss/variable.scss';
+
+
+    .logo{
+        width: 170px;
+        height: $logo-height;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        margin: 0 auto;
+        background-color: $black-color;
+        border: 3px solid $dark-orange;
+        border-top: 0;
+        div{
+            position: relative;
+            background-color: $black-color;
+            z-index: 100;
+            height: calc(#{$logo-height} - 3px);
+            img{
+                width: 67%;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    }
+    .selected{
+        display: none;
+    }
+    .nav{
+        height: $nav-height;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 13%;
+        position: relative;
+        background-color: $black-color;
+        border-bottom: 3px solid $dark-orange;
+        ul{
+
+            height: inherit;
+            display: flex;
+            list-style: none;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            
+
+            li{
+                padding: 20px 70px;
+                font-size: 1.1rem;
+                
+                &:nth-child(2){
+                    background-color: white;
+                    width: 1px;
+                    padding: 0;
+                    height: 47%;
+                }
+            }
+        }
+    }
+    .languageSite{
+        position: absolute;
+        right: 10px;
+        top: 25px;
+        color: white;
+        a{
+            margin:2px;
+        }
+    }
+
+@media screen and (max-width: 1400px){
+        .nav{
+        padding: 0 7%;
+
+        }
+    }
+@media screen and (max-width: 1100px){
+        .nav{
+            ul{
+                li{
+                    padding: 20px 40px;
+                }
+            }
+        }
+    }

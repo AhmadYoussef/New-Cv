@@ -1,0 +1,22 @@
+@import '../assets/Scss/variable.scss';
+.bullets .swiper-pagination-bullet{
+    padding: 6px;
+}
+.bullets .swiper-pagination-bullet-active{
+    background-color: $dark-orange;
+}
+
+.swiper-button-next {
+    top: 40%;
+
+    background-image: url('../assets/images/svg/right.svg');
+}
+.swiper-button-prev{
+    top: 40%;
+
+    background-image: url('../assets/images/svg/left.svg');
+
+}
+.swiper-slide{
+    display: flex;
+}
