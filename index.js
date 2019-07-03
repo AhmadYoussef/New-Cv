@@ -12,7 +12,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 app.get('/api/hello', (req, res) => {
-    res.send({ express: process.env.USER });
+    res.send({
+        express: process.env.USERE,
+    });
 });
 app.post('/sendmail', (req, res) => {
     const body = req.body;
@@ -22,7 +24,7 @@ app.post('/sendmail', (req, res) => {
         let transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
-                user: process.env.USER,
+                user: process.env.USERE,
                 pass: process.env.PASS
             }
         });
