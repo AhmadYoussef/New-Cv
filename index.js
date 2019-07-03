@@ -12,8 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 app.get('/api/hello', (req, res) => {
-    console.log(process.env.DATABASE_URL);
-    res.send({ express: 'Hello From Express' });
+    res.send({ express: process.env.DATABASE_URL });
 });
 app.post('/sendmail', (req, res) => {
     const body = req.body;
