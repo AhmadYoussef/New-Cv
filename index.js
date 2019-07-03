@@ -19,6 +19,7 @@ app.get('/api/hello', (req, res) => {
 app.post('/sendmail', (req, res) => {
     const body = req.body;
     async function main() {
+        let resObj = { sent: false, message: 'Not Send' };
 
         // create reusable transporter object using the default SMTP transport
         let transporter = nodemailer.createTransport({
@@ -40,7 +41,6 @@ app.post('/sendmail', (req, res) => {
         }
         // send mail with defined transport object
         let info = await transporter.sendMail(mailOptions);
-        let resObj = { sent: false, message: 'Not Send' };
         if (info.response) {
             resObj = { sent: true, message: 'Send' };
             return res.send(resObj)
@@ -52,9 +52,9 @@ app.post('/sendmail', (req, res) => {
 // Serve static files from the React frontend app
 app.use(express.static(path.join(__dirname, 'client/build')))
 // Anything that doesn't match the above, send back index.html
-// app.get('*', (req, res) => {
-//     res.sendFile(path.join(__dirname + '/client/build/index.html'))
-// })
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname + '/client/build/index.html'))
+})
 
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
