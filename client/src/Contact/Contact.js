@@ -135,7 +135,7 @@ class Contact extends React.Component {
             let bodyObj = {};
             this.state.formField.forEach(item => bodyObj[item.name] = item.value);
             this.setState({ formField: initialState, isSubmit: false });
-            axios.post("/sendmail", { obj: bodyObj })
+            axios.post("/sendmail", { ...bodyObj })
                 .then(res => {
                     console.log(res);
                     this.setState({ isSend: true, resMessage: { ...res.data } },
