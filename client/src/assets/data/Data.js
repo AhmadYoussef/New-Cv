@@ -101,25 +101,25 @@ export const langData = {
         contact: "Contact",
         projectBtn: 'View',
         contactText: `I am always open for new opportunities and for new visions. So let's get in touch by                  dropping me a line.`,
-        homeText1: () => (<><h2> Hi, <span>My name </span>is Ahmad Youssef.</h2>
+        homeText1: () => (<><h2> Hi, <span>my name </span>is Ahmad Youssef.</h2>
             <h2> I am a Front-End Develper.</h2></>),
         homeText2: () => (<p>Feel free to download my CV <span>here:</span><br />
             <span>English</span> - <span>German</span></p>),
         aboutText: () => (<p>
             Hello, <br />
-            My name Ahmad Youssef. I am currently training as a front-end developer at the DCI Digital Career Institute in Dusseldorf. I studied telecommunications in Syria and came to Germany in 2016. Since I have a great passion for programming, I wanted to evolve in this area. During this course, I did several projects for friends and clients.
+            my name Ahmad Youssef. I am currently training as a front-end developer at the DCI Digital Career Institute in Dusseldorf. I studied telecommunications in Syria and came to Germany in 2016. Since I have a great passion for programming, I wanted to evolve in this area. During this course, I did several projects for friends and clients.
                 </p>),
 
     },
     de: {
         home: "Startseite",
         about: "Über mich",
-        skills: "SKills",
+        skills: "Skills",
         project: "Projekte",
         contact: "Kontakt",
         projectBtn: "Ansicht",
         contactText: `Ich bin immer offen für neue Möglichkeiten und Visionen. Also lassen Sie uns Kontakt                  aufnehmen indem Sie mir schreiben.`,
-        homeText1: () => (<><h2> Hi, <span>Mein Name </span>ist Ahmed Youssef.</h2>
+        homeText1: () => (<><h2> Hi, <span>mein Name </span>ist Ahmed Youssef.</h2>
             <h2>Ich bin Front-End-Entwickler.</h2></>),
         homeText2: () => (<p>Hier finden Sie meinen Lebenslauf:<br />
             <span>Deutsch</span> - <span>Englisch</span></p>),

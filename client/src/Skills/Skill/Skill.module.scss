@@ -71,3 +71,14 @@ $shield-width: 170px;
         }
     }
 }
+@media screen and (min-width: 1400px){
+    .shield {
+        div{
+            &.back{
+                p{
+                    font-size: 15.6px;
+                }
+            }
+        }
+    }
+}

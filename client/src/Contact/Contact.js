@@ -13,7 +13,7 @@ const initialState = [
         name: 'firstName',
         placeHolder: {
             en: "Please enter your First Name",
-            de: "ge Please enter your First Name"
+            de: "Bitte geben Sie Ihren Vornamen ein"
         },
         validity: {
             require: true,
@@ -29,7 +29,7 @@ const initialState = [
         name: 'lastName',
         placeHolder: {
             en: "Please enter your last Name",
-            de: "Please enter your last Name"
+            de: "Bitte geben Sie Ihren Nachnamen ein"
         },
         validity: {
             require: true,
@@ -45,7 +45,7 @@ const initialState = [
         name: 'email',
         placeHolder: {
             en: "Please enter your email address",
-            de: "Please enter your email address"
+            de: "Bitte geben Sie Ihre Email-Adresse ein"
         },
         validity: {
             require: true,
@@ -60,7 +60,7 @@ const initialState = [
         name: 'telephone',
         placeHolder: {
             en: "Please enter your telephone number",
-            de: "Please enter your telephone number"
+            de: "Bitte geben Sie Ihre Telefonnummer ein"
         },
         validity: {
             require: true,
@@ -74,8 +74,8 @@ const initialState = [
         type: 'text',
         name: 'message',
         placeHolder: {
-            en: "Please enter your Message...",
-            de: "Please enter your Message..."
+            en: "Please enter your Message",
+            de: "Bitte geben Sie Ihre Nachricht ein"
         },
         validity: {
             require: true,
