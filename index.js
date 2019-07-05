@@ -36,8 +36,14 @@ app.post('/sendmail', (req, res) => {
             subject: `An mail from my Portfolio by ${body.lastName}`,
             text: `Name : ${body.firstName} ${body.lastName}
                 Telephone: ${body.telephone}
+                email: ${body.email}
                 Message: 
-                ${body.message}`
+                ${body.message}`,
+            html: `<p><b>Full name:</b> ${body.firstName} ${body.lastName}</p>
+            <p><b>Telephone number:</b> ${body.telephone}</p>
+            <p><b>Email Address:</b> ${body.email}</p>
+            <p><b>Message:</b></p> 
+            <p>${body.message}</p>`
         }
         // send mail with defined transport object
         let info = await transporter.sendMail(mailOptions);

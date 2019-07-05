@@ -30,6 +30,7 @@
             &.error::placeholder{
                 color: red;
             }
+            &:focus {outline:0;}
         }
         input{
             width: 48%;
@@ -44,6 +45,7 @@
             padding: 8px 15px;
             color: $dark-orange;
             border: 0;
+            height: 40px;
             border-radius: 5px;
             cursor: pointer;
             margin-left: auto;

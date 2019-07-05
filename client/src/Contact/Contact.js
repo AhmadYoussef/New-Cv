@@ -4,6 +4,8 @@ import Input from './Input';
 import { langData } from '../assets/data/Data';
 import AlertMessage from './AlertMessage/AlertMessage';
 import axios from 'axios';
+import ReCAPTCHA from 'react-recaptcha';
+import './recap.css';
 
 const initialState = [
     {
@@ -85,12 +87,13 @@ const initialState = [
         isValid: false
     },
 ]
-
+let recaptchaInstance;
 class Contact extends React.Component {
     state = {
         formField: [...initialState],
         isSubmit: false,
         isSend: false,
+        reCaptcha: false,
         resMessage: {
             sent: true,
             message: 'yaaay!'
@@ -130,16 +133,16 @@ class Contact extends React.Component {
             }
             return item;
         })
-        if (formIsValid) {
+        if (formIsValid && this.state.reCaptcha) {
 
             let bodyObj = {};
             this.state.formField.forEach(item => bodyObj[item.name] = item.value);
             this.setState({ formField: initialState, isSubmit: false });
             axios.post("/sendmail", { ...bodyObj })
                 .then(res => {
-                    console.log(res);
-                    this.setState({ isSend: true, resMessage: { ...res.data } },
+                    this.setState({ isSend: true, reCaptcha: false, resMessage: { ...res.data } },
                         () => {
+                            recaptchaInstance.reset();
                             setTimeout(() => { this.closeMessageLoader() }, 4000)
                         }
                     )
@@ -150,6 +153,13 @@ class Contact extends React.Component {
     }
     closeMessageLoader = () => {
         this.setState({ isSend: false })
+    }
+    callBack = () => {
+        console.log("reCaptcha Reloaded")
+    }
+    verifyCallback = (response) => {
+        if (response)
+            this.setState({ reCaptcha: true })
     }
     render() {
         let content = { ...langData.en };
@@ -171,6 +181,15 @@ class Contact extends React.Component {
                                 lang={this.props.lang}
                                 {...item} />)
                     }
+                    <ReCAPTCHA
+                        className={classes.reCaptcha}
+                        sitekey="6LfETKwUAAAAADjA7LW_lo8bOLTNrbemJaZUN6VS"
+                        ref={e => recaptchaInstance = e}
+                        render="explicit"
+
+                        verifyCallback={this.verifyCallback}
+                        onloadCallback={this.callBack}
+                    />
                     <input type="submit" value="Send" />
                 </form>
                 {this.state.isSend ? <AlertMessage {...this.state.resMessage} click={this.closeMessageLoader} /> : null}
