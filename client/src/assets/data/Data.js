@@ -105,10 +105,10 @@ export const langData = {
             <h2> I am a Front-End Develper.</h2></>),
         homeText2: () => (<p>Feel free to download my CV <span>here:</span><br />
             <span>English</span> - <span>German</span></p>),
-        aboutText: () => (<p>
+        aboutText: () => (<>
             Hello, <br />
             my name Ahmad Youssef. I am currently training as a front-end developer at the DCI Digital Career Institute in Dusseldorf. I studied telecommunications in Syria and came to Germany in 2016. Since I have a great passion for programming, I wanted to evolve in this area. During this course, I did several projects for friends and clients.
-                </p>),
+                </>),
 
     },
     de: {
@@ -123,10 +123,10 @@ export const langData = {
             <h2>Ich bin Front-End-Entwickler.</h2></>),
         homeText2: () => (<p>Hier finden Sie meinen Lebenslauf:<br />
             <span>Deutsch</span> - <span>Englisch</span></p>),
-        aboutText: () => (<p>
+        aboutText: () => (<>
             Hallo, <br />
             ich bin Ahmad Youssef. Ich mache zur Zeit beim DCI Digital Career Institut  in Düsseldorf eine Ausbildung zum Front-End Entwickler. Ich habe in Syrien Telekommunikation  studiert und bin 2016 nach Deutschland gekommen. Da ich eine große Leidenschaft für das Programmieren habe, wollte  ich mich auf diesem Gebiet weiterentwickeln. Während dieses Kurses habe ich mehrere Projekte für Freunde und Kunden durchgeführt.
-                    </p>),
+                    </>),
 
 
     }
