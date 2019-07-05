@@ -14,10 +14,6 @@ const SkillsList = (props) => {
     const params = {
         modules: [Pagination, Navigation], //  must
         slidesPerView: 4, //
-        autoplay: {
-            delay: 4000,
-            disableOnInteraction: true
-        },
         spaceBetween: 40, // space between the images
         centeredSlides: true,
         grabCursor: true, // style the cursor
