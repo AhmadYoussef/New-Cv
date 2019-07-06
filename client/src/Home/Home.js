@@ -3,6 +3,8 @@ import classes from './home.module.scss';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
 import { langData } from '../assets/data/Data';
 import { Animate, AnimateGroup } from 'react-simple-animate';
+import English from '../assets/pdf/Ahmad-Youssef-CV-English.pdf'
+import German from '../assets/pdf/Ahmad-Youssef-CV-German.pdf'
 
 const Home = (props) => {
     let content = { ...langData.en };
@@ -30,12 +32,23 @@ const Home = (props) => {
                         end={{ opacity: 1, filter: 'blur(0)', transform: 'translateY(0)' }}
                     >
                         <div className={classes.dowAndLogo}>
-                            {content.homeText2()}
+                            <p>{content.homeText2()}
+                                <a href={English} download>{content.cvLang[0]}</a> -
+                                <a href={German} download> {content.cvLang[1]}</a>
+                            </p>
                             <div className={classes.logos}>
-                                <img src={require('../assets/images/svg/xking.svg')} alt="xking" />
-                                <img src={require('../assets/images/svg/linkedin.svg')} alt="linkedin" />
-                                <img src={require('../assets/images/svg/pen.svg')} alt="pen" />
-                                <img src={require('../assets/images/svg/github.svg')} alt="github" />
+                                <a href="https://www.xing.com/profile/ahmad_Youssef3" target="_blank" rel="noopener noreferrer">
+                                    <img src={require('../assets/images/svg/xking.svg')} alt="xking" />
+                                </a>
+                                <a href="https://www.linkedin.com/in/ahmad-youssef-82107386" target="_blank" rel="noopener noreferrer">
+                                    <img src={require('../assets/images/svg/linkedin.svg')} alt="linkedin" />
+                                </a>
+                                <a href="https://codepen.io/ahmadyoussef/" target="_blank" rel="noopener noreferrer">
+                                    <img src={require('../assets/images/svg/pen.svg')} alt="pen" />
+                                </a>
+                                <a href="https://github.com/AhmadYoussef" target="_blank" rel="noopener noreferrer">
+                                    <img src={require('../assets/images/svg/github.svg')} alt="github" />
+                                </a>
                             </div>
                         </div>
                     </Animate>
