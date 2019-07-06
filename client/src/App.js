@@ -7,22 +7,29 @@ import Footer from './Footer/Footer';
 import NotExist from './notExist/NotExist404';
 import ScrollToTop from './ScrollToTop/ScrollToTop';
 
-function App(props) {
-  console.log(props);
-  return (
-    <div className={classes.app}>
-      <BrowserRouter>
-        <ScrollToTop>
-          <NavBar />
-          <Switch>
-            <Route exact path={["/", "/en", "/de"]} component={Main} />
-            <Route component={NotExist} />
-          </Switch>
-          <Footer />
-        </ScrollToTop>
-      </BrowserRouter>
-    </div>
-  );
+class App extends React.Component {
+  state = {
+    navActive: {}
+  }
+  updateState = (obj) => {
+    this.setState({ navActive: obj })
+  }
+  render() {
+    return (
+      <div className={classes.app} >
+        <BrowserRouter>
+          <ScrollToTop>
+            <NavBar navActive={this.state.navActive} />
+            <Switch>
+              <Route exact path={["/", "/en", "/de"]} render={(props) => <Main {...props} updateState={this.updateState} />} />
+              <Route component={NotExist} />
+            </Switch>
+            <Footer />
+          </ScrollToTop>
+        </BrowserRouter>
+      </div>
+    );
+  }
 }
 
 export default App;

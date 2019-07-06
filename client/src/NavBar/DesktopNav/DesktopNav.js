@@ -21,23 +21,35 @@ const DesktopNav = (props) => {
             <div className={classes.nav}>
                 <ul>
                     <NavLink smooth to={`${props.path}#home`}>
-                        <li>{props.home}</li>
+                        <li>
+                            {props.home}
+                            {props.navActive.home ? <div className={classes.active} /> : null}
+                        </li>
                     </NavLink>
                     <li></li>
                     <NavLink to={`${props.path}#about`}
                         scroll={el => scroll(el)}>
-                        <li>{props.about}</li>
+                        <li>
+                            {props.about}
+                            {props.navActive.about ? <div className={classes.active} /> : null}
+                        </li>
                     </NavLink>
                 </ul>
                 <ul>
                     <NavLink
                         to={`${props.path}#project`}
                         scroll={el => scroll(el)}
-                    ><li>{props.project}</li></NavLink>
+                    ><li>
+                            {props.project}
+                            {props.navActive.project ? <div className={classes.active} /> : null}
+                        </li></NavLink>
                     <li></li>
                     <NavLink to={`${props.path}#contact`}
                         scroll={el => scroll(el)}>
-                        <li>{props.contact}</li>
+                        <li>
+                            {props.contact}
+                            {props.navActive.contact ? <div className={classes.active} /> : null}
+                        </li>
                     </NavLink>
                 </ul>
             </div>

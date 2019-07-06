@@ -49,7 +49,19 @@
             li{
                 padding: 20px 70px;
                 font-size: 1.1rem;
-                
+                position: relative;
+                .active{
+                    position: absolute;
+                    height: 0;
+                    width: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: -14px;
+                    margin: 0 auto;
+                    border-top: 13px solid $dark-orange;
+                    border-left: 13px solid transparent;
+                    border-right: 13px solid transparent;
+                }
                 &:nth-child(2){
                     background-color: white;
                     width: 1px;
