@@ -6,7 +6,6 @@ import AlertMessage from './AlertMessage/AlertMessage';
 import axios from 'axios';
 import ReCAPTCHA from 'react-recaptcha';
 import './recap.css';
-// import { Animate, AnimateGroup } from 'react-simple-animate';
 
 const initialState = [
     {
@@ -168,21 +167,9 @@ class Contact extends React.Component {
             content = { ...langData.de };
         return (
             <div id="contact" className={classes.contactContainer}>
-                {/* <AnimateGroup play={this.props.isAnimation}>
-                    <Animate
-                        sequenceIndex={0}
-                        duration={.5}
-                        start={{ opacity: 0, filter: 'blur(20px)', transform: 'translateY(-40px)' }}
-                        end={{ opacity: 1, filter: 'blur(0)', transform: 'translateY(0)' }}
-                    > */}
+
                 <h2>{content.contact}</h2>
-                {/* </Animate>
-                    <Animate
-                        sequenceIndex={1}
-                        duration={.5}
-                        start={{ opacity: 0, filter: 'blur(20px)', transform: 'translateX(-40px)' }}
-                        end={{ opacity: 1, filter: 'blur(0)', transform: 'translateX(0)' }}
-                    > */}
+
                 <form onSubmit={this.sendMail}>
                     <p>{content.contactText}</p>
                     {
@@ -208,9 +195,7 @@ class Contact extends React.Component {
 
 
                 </form>
-                {/* </Animate> */}
                 {this.state.isSend ? <AlertMessage {...this.state.resMessage} click={this.closeMessageLoader} /> : null}
-                {/* </AnimateGroup > */}
             </div >
         );
     }
