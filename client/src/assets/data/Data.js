@@ -4,8 +4,8 @@ export const skills = [
     {
         id: 1,
         logoImg: "reactJs.svg",
-        en: 'I have the ability to handle any Problem with ReactJs',
-        de: 'Ich kann jedes Problem mit ReactJs lösen'
+        en: 'I have the ability to handle any Problem with ReactJs.',
+        de: 'Ich kann jedes Problem mit ReactJs lösen.'
     },
     {
         id: 2,
@@ -40,7 +40,7 @@ export const skills = [
     {
         id: 7,
         logoImg: "jQuery.svg",
-        en: 'Good knowledge in Jquery',
+        en: 'Good knowledge in Jquery.',
         de: 'Gute Kenntnisse in Jquery.'
     },
 
