@@ -67,7 +67,7 @@ export const projects = [
         id: 2,
         images: 'card/1.png',
         languages: ['HTML', 'CSS', 'JavaScript'],
-        disable: true,
+        disable: false,
         viewLink: 'https://guesscardwojokh.web.app/',
         codeLink: 'https://github.com/AhmadYoussef/guess-card'
     },
