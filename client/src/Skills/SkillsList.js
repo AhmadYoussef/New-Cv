@@ -5,7 +5,7 @@ import './slider.scss';
 import classes from './SkillsList.module.scss';
 import Skill from './Skill/Skill';
 import { langData, skills } from '../assets/data/Data';
-import { Animate, AnimateGroup } from 'react-simple-animate';
+// import { Animate, AnimateGroup } from 'react-simple-animate';
 
 const SkillsList = (props) => {
     let content = { ...langData.en };
@@ -46,37 +46,37 @@ const SkillsList = (props) => {
     };
     return (
         <div id="skills" className={classes.SkillsContainer} >
-            <AnimateGroup play={props.isAnimation}>
+            {/* <AnimateGroup play={props.isAnimation}>
                 <Animate
                     play={props.isAnimation}
                     sequenceIndex={0}
                     duration={.8}
                     start={{ opacity: 0, filter: 'blur(20px)', transform: 'translateY(-40px)' }}
                     end={{ opacity: 1, filter: 'blur(0)', transform: 'translateY(0)' }}
-                >
-                    <h2>{content.skills}</h2>
-                </Animate>
+                > */}
+            <h2>{content.skills}</h2>
+            {/* </Animate>
                 <Animate
                     play={props.isAnimation}
                     sequenceIndex={1}
                     duration={.8}
                     start={{ opacity: 0, filter: 'blur(20px)', transform: 'translateX(-40px)' }}
                     end={{ opacity: 1, filter: 'blur(0)', transform: 'translateX(0)' }}
-                >
-                    <div className={classes.skillsSlider}>
-                        <Swiper {...params} className={classes.swiper} >
-                            {
-                                skills.map((item, index) => (
-                                    <div key={item.id}>
-                                        <Skill {...item} lang={props.lang} />
-                                    </div>
-                                ))
-                            }
-                        </Swiper>
-                    </div>
-                </Animate>
+                > */}
+            <div className={classes.skillsSlider}>
+                <Swiper {...params} className={classes.swiper} >
+                    {
+                        skills.map((item, index) => (
+                            <div key={item.id}>
+                                <Skill {...item} lang={props.lang} />
+                            </div>
+                        ))
+                    }
+                </Swiper>
+            </div>
+            {/* </Animate>
 
-            </AnimateGroup>
+            </AnimateGroup> */}
         </div >
     );
 }
