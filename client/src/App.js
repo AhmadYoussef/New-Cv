@@ -9,19 +9,28 @@ import ScrollToTop from './ScrollToTop/ScrollToTop';
 
 class App extends React.Component {
   state = {
-    navActive: {}
+    navActive: {},
+    topPosition: false
   }
   updateState = (obj) => {
-    this.setState({ navActive: obj })
+    if (typeof obj === "object")
+      this.setState({ navActive: obj })
+    else {
+      this.setState({ topPosition: obj })
+    }
   }
   render() {
+    let topPosition = { position: "absolute" }
+    if (this.state.topPosition) {
+      topPosition = { position: "fixed" }
+    }
     return (
       <div className={classes.app} >
         <BrowserRouter>
           <ScrollToTop>
-            <NavBar navActive={this.state.navActive} />
+            <NavBar topPosition={topPosition} navActive={this.state.navActive} />
             <Switch>
-              <Route exact path={["/", "/en", "/de"]} render={(props) => <Main {...props} updateState={this.updateState} />} />
+              <Route exact path={["/", "/en", "/de"]} render={(props) => <Main {...props} topPosition={this.state.topPosition} updateState={this.updateState} />} />
               <Route component={NotExist} />
             </Switch>
             <Footer />

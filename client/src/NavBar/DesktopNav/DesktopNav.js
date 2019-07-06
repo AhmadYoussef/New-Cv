@@ -10,7 +10,7 @@ const DesktopNav = (props) => {
     }
     return (
         <>
-            <div className={classes.logo}>
+            <div className={classes.logo} >
                 <NavLink to={`${props.path}#home`}
                     smooth>
                     <div style={{ backgroundColor: "#333333" }}>
@@ -18,7 +18,7 @@ const DesktopNav = (props) => {
                     </div>
                 </NavLink>
             </div>
-            <div className={classes.nav}>
+            <div className={classes.nav} >
                 <ul>
                     <NavLink smooth to={`${props.path}#home`}>
                         <li>

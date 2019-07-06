@@ -22,7 +22,7 @@ class NavBar extends React.Component {
             mobDesTopggle = <SideNavBar {...content} updatePath={this.updatePath} path={this.state.path} />;
         }
         return (
-            <nav className={classes.navBar}>
+            <nav className={classes.navBar} style={{ ...this.props.topPosition }}>
                 {mobDesTopggle}
             </nav>
         );
