@@ -52,7 +52,7 @@ export const projects = [
         images: 'market/1.png',
         languages: ['HTML', 'SCSS', 'JavaScript', 'ReactJs'],
         disable: false,
-        viewLink: 'http://market.awojokh.com/',
+        viewLink: 'http://market.awojokh.com/Product/Handy',
         codeLink: 'https://github.com/AhmadYoussef/Online-Market.git'
     },
     {
@@ -76,7 +76,7 @@ export const projects = [
         images: 'anzzor/1.png',
         languages: ['HTML', 'CSS', 'JavaScript'],
         disable: true,
-        viewLink: 'https://anzzor.co/',
+        viewLink: 'https://anzzor.com/',
         codeLink: ''
     },
     {
