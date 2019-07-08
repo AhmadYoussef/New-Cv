@@ -47,23 +47,23 @@ $shield-width: 170px;
         &:before {
             border-top: 75px solid $dark-orange;
             border-left: calc(#{$shield-width/2} + 1px) solid transparent;
-            border-right: calc(#{$shield-width/2} + 1px) solid transparent;
-            content: "";
-            height: 0;
-            left: -3px;
-            position: absolute;
-            bottom: -75px;
-            width: 0;
-        }
-        &:after , .triangle {
-            border-top: 75px solid $black-color;
-            border-left: calc(#{$shield-width/2} - 1px) solid transparent;
             border-right: calc(#{$shield-width/2} - 1px) solid transparent;
             content: "";
             height: 0;
-            left: -1px;
+            left: -2px;
             position: absolute;
-            bottom: -73px;
+            bottom: -77.05px;
+            width: 0;
+        }
+        &:after , .triangle {
+            border-top: 74px solid $black-color;
+            border-left: calc(#{$shield-width/2} - 0.5px) solid transparent;
+            border-right: calc(#{$shield-width/2} - 3.49px) solid transparent;
+            content: "";
+            height: 0;
+            left: -0.09px;
+            position: absolute;
+            bottom: -72.8px;
             width: 0;
         }
         .triangle{
