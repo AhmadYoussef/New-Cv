@@ -46,24 +46,24 @@ $shield-width: 170px;
         }
         &:before {
             border-top: 75px solid $dark-orange;
-            border-left: calc(#{$shield-width/2} + 1px) solid transparent;
-            border-right: calc(#{$shield-width/2} - 1px) solid transparent;
+            border-left: calc(#{$shield-width/2} ) solid transparent;
+            border-right: calc(#{$shield-width/2} ) solid transparent;
             content: "";
             height: 0;
             left: -2px;
             position: absolute;
-            bottom: -77.05px;
+            bottom: -77px;
             width: 0;
         }
         &:after , .triangle {
             border-top: 74px solid $black-color;
-            border-left: calc(#{$shield-width/2} - 0.5px) solid transparent;
-            border-right: calc(#{$shield-width/2} - 3.49px) solid transparent;
+            border-left: calc(#{$shield-width/2} - 1.6px) solid transparent;
+            border-right: calc(#{$shield-width/2} - 1.6px) solid transparent;
             content: "";
             height: 0;
-            left: -0.09px;
+            left: -0.15px;
             position: absolute;
-            bottom: -72.8px;
+            bottom: -73.1px;
             width: 0;
         }
         .triangle{
