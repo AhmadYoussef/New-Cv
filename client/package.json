@@ -15,7 +15,7 @@
     "react-scripts": "3.0.1",
     "react-simple-animate": "^3.2.0",
     "react-sizes": "^2.0.0",
-    "swiper": "^4.5.0"
+    "swiper": "^6.5.1"
   },
   "scripts": {
     "start": "react-scripts start",
